@@ -1,0 +1,65 @@
+/* =========================================================
+   UTILITIES – Helpers & Animations
+========================================================= */
+
+/* =========================
+   TEXT HELPERS
+========================= */
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+/* =========================
+   SPACING
+========================= */
+.mt-2 { margin-top: 16px; }
+.mt-4 { margin-top: 32px; }
+.mt-6 { margin-top: 48px; }
+
+.mb-2 { margin-bottom: 16px; }
+.mb-4 { margin-bottom: 32px; }
+.mb-6 { margin-bottom: 48px; }
+
+.max-600 { max-width: 600px; }
+.max-800 { max-width: 800px; }
+
+/* =========================
+   SIMPLE ANIMATIONS
+========================= */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: var(--transition-slow);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: var(--transition-slow);
+}
+
+.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* =========================
+   PAGE BACKGROUNDS
+========================= */
+.page-light {
+  background: var(--color-light);
+}
+
+.page-dark {
+  background: var(--color-dark);
+  color: var(--color-text-invert);
+}
