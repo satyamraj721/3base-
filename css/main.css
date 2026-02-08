@@ -1,5 +1,5 @@
 /* =========================================================
-   MAIN CSS – Imports Only
+   MAIN CSS – Imports
 ========================================================= */
 
 @import url("./base.css");
@@ -8,10 +8,126 @@
 @import url("./sections.css");
 @import url("./utilities.css");
 
-/* ===== LOGO SIZING ===== */
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 72px;          /* clean professional height */
+  padding: 12px 40px;
+}
+
+/* =========================================================
+   LOGO (FINAL SAFE SIZE)
+========================================================= */
+
 .site-logo {
-  height: clamp(68px, 10vw, 140px);
+  height: 48px;
   width: auto;
   object-fit: contain;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .site-logo {
+    height: 36px;
+  }
+}
+
+/* =========================================================
+   MAIN / HERO (NO GAP GUARANTEE)
+========================================================= */
+
+main#home {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+main#home > section:first-child,
+.hero,
+.hero-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.hero-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+
+
+
+
+.hero-actions .btn-primary {
+  background: #e0b43c;
+  color: #111;
+}
+
+.hero-actions .btn-primary:hover {
+  background: #cfa532;
+  transform: translateY(-1px);
+}
+
+.hero-actions .btn-outline {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.hero-actions .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-actions .btn-ghost {
+  background: transparent;
+  color: #d6d6d6;
+}
+
+.hero-actions .btn-ghost:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+  .hero-actions .btn {
+    width: 100%;
+  }
 }
